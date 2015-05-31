@@ -1,7 +1,7 @@
 development:
   sessions:
     default:
-      database: locomotive_dev
+      database: revveries_dev
       hosts:
         - localhost:27017
   options:
@@ -10,7 +10,7 @@ development:
 test:
   sessions:
     default:
-      database: locomotive_test
+      database: revveries_test
       hosts:
         - localhost:27017
   options:
@@ -19,7 +19,7 @@ test:
 production:
   sessions:
     default:
-      database: locomotive_production
+      database: revveries_production
       # heroku
       # uri: <%= ENV['MONGOHQ_URL'] %>
       hosts:
