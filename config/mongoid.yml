@@ -1,0 +1,27 @@
+development:
+  sessions:
+    default:
+      database: revveries_dev
+      hosts:
+        - localhost:27017
+  options:
+    identity_map_enabled: true
+
+test:
+  sessions:
+    default:
+      database: revveries_test
+      hosts:
+        - localhost:27017
+  options:
+    identity_map_enabled: true
+
+production:
+  sessions:
+    default:
+      database: revveries_production
+      uri: <%= ENV['MONGO_URL'] %>
+      hosts:
+        - localhost:27017
+  options:
+    identity_map_enabled: true
