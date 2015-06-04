@@ -19,9 +19,10 @@ test:
 production:
   sessions:
     default:
-      database: revveries_production
-      uri: <%= ENV['MONGO_URL'] %>
+      database: <%= ENV['MONGO_DB'] %>
       hosts:
-        - localhost:27017
+        - <%= ENV['MONGO_HOST'] %>
+      username: <%= ENV['MONGO_USER'] %>
+      password: <%= ENV['MONGO_PASS'] %>
   options:
     identity_map_enabled: true
